@@ -4,7 +4,9 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "./node_modules/.bin/babel src --out-dir lib"
+    "prepublish": "./node_modules/.bin/babel src --out-dir lib",
+    "tsc:build": "./node_modules/.bin/tsc tsc/*",
+    "tsc:publish": "./node_modules/.bin/babel tsc --out-dir tsclib"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,13 @@
   },
   "homepage": "https://github.com/apersonw/rxjava-api-core#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.9.6"
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "typescript": "^3.9.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4"
+    "@babel/polyfill": "^7.10.1"
   }
 }
