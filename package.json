@@ -2,11 +2,11 @@
   "name": "rxjava-api-core",
   "version": "1.1.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "tsclib/index.js",
   "scripts": {
     "prepublish": "./node_modules/.bin/babel src --out-dir lib",
-    "tsc:build": "./node_modules/.bin/tsc tsc/*",
-    "tsc:publish": "./node_modules/.bin/babel tsc --out-dir tsclib"
+    "tsc:build": "./node_modules/.bin/tsc tsc/*.ts",
+    "tsc:publish": "rm -fr ./tsclib && ./node_modules/typescript/bin/tsc"
   },
   "repository": {
     "type": "git",
