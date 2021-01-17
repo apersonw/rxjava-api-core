@@ -1,30 +1,27 @@
-import HttpUtils from './HttpUtils';
-
 /** HTTP 请求方法 */
-export enum Method {
+export declare enum Method {
     /** HTTP 请求 OPTIONS */
     /** HTTP 请求 GET */
-    GET,
+    GET = 0,
     /** HTTP 请求 HEAD */
-    HEAD,
+    HEAD = 1,
     /** HTTP 请求 POST */
-    POST,
+    POST = 2,
     /** HTTP 请求 PUT */
-    PUT,
+    PUT = 3,
     /** HTTP 请求 PATCH */
-    PATCH,
+    PATCH = 4,
     /** HTTP 请求 DELETE */
-    DELETE,
+    DELETE = 5,
     /** HTTP 请求 TRACE */
-    TRACE,
+    TRACE = 6,
     /** HTTP 请求 CONNECT */
-    CONNECT,
+    CONNECT = 7
 }
-
 /**
  * 请求参数对象
  */
-export type RequestParam = {
+export declare type RequestParam = {
     /**
      * 服务名
      */
@@ -62,11 +59,7 @@ export type RequestParam = {
      */
     headers?: any;
 };
-
-class AbstractApi {
-    _request(requestParam: RequestParam) {
-        return HttpUtils.request(requestParam);
-    }
+declare class AbstractApi {
+    _request(requestParam: RequestParam): any;
 }
-
 export default AbstractApi;
